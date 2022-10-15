@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section_container{
+    background-color:#181818 ;
+}
+
+
+
+#logo{
+    height: 100px;
+}
+
+.header_container{
+    position: sticky;
+    top: 0%;
+    z-index: 999999;
+    width: 100%;
+    }
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1300px;
+    
+}
+
+#toggle-menu_icon{
+    display: none;
+    color: #fafafa;
+}
+
+.navbar #toggle-menu{
+    display: none;
+}
+
+
+.navbar_list{
+    display: flex;
+    gap: 50px;
+
+}
+
+ul i{
+    font-size: 20px;
+    color: #ffa400;
+    padding-right: 10px;
+}
+
+a{
+    color: blanchedalmond;
+}
+
+/* HERO */
+
+.hero_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    
+}
+
+h1{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 50px;
+}
+
+.hero-title p{
+    font-size: 20px;
+}
+
+.hero-title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fafafa;
+    height: 80%;
+}
+
+.hero-title button{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    background:linear-gradient(45deg, #ffa100,#fb103d) ;
+    color: #fafafa;
+    font-size: 15px;
+}
+
+.imagen_hero{
+    height: 400px;
+}
