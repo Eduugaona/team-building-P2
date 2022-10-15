@@ -1,57 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script src="https://kit.fontawesome.com/5407179058.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5407179058.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <div class="section_container header_container">
-        <header class="header">
-            <div class="logo_container">
-                <img src="imagenes/logo_pizza.png" alt="" id="logo">
-            </div>
-            <nav class="navbar">
-                <label for="toggle-menu"><i class="fa-solid fa-bars fa-2x" id="toggle-menu_icon"></i></label>
-                <input type="checkbox" id="toggle-menu">
-                <ul class="navbar_list">
-                    
-                    <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
-                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a> </li>
-                    <li><a href="#"><i class="fa-solid fa-user"></i></a> </li>
-                </ul>
-
-            </nav>
-        </header>
-    </div>
-
-    <div class="section_container">
-        <div class="hero_container">
-            <div class="hero-title">
-                <h1>Si tenes Zappi,</h1>
-                <h2>tenes Nucba.</h2>
-                <p>Busca lo que quieras y Nucba te quedes sin comida.</p>
-                <button>VER MAS</button>
-            </div>
-            <div class="logo_hero_container">
-                <img src="/imagenes/logo_principal.png" class="imagen_hero" alt="">
-            </div>
+      <header class="header">
+        <div class="logo_container">
+          <img src="imagenes/logo_pizza.png" alt="" id="logo" />
         </div>
+        <nav class="navbar">
+          <label for="toggle-menu"
+            ><i class="fa-solid fa-bars fa-2x" id="toggle-menu_icon"></i
+          ></label>
+          <input type="checkbox" id="toggle-menu" />
+          <ul class="navbar_list">
+            <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
+            <li>
+              <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
 
     <div class="section_container">
-
+      <div class="hero_container">
+        <div class="hero-title">
+          <h1>Si tenes Zappi,</h1>
+          <h2>tenes Nucba.</h2>
+          <p>Busca lo que quieras y Nucba te quedes sin comida.</p>
+          <button>VER MAS</button>
+        </div>
+        <div class="logo_hero_container">
+          <img src="/imagenes/logo_principal.png" class="imagen_hero" alt="" />
+        </div>
+      </div>
     </div>
-    
 
+    <!-- Seccion de recomendaciones -->
 
+    <section class="recommendations">
+      <h2>Hoy te recomendamos</h2>
+      <div class="recommendations_container">
+        <div class="recommendations_card">
+          <img src="imagenes/pizza-recomendaciones.jpeg" alt="" />
+          <div>
+            <h3>Bennazianna</h3>
+            <p class="description">La mas completa</p>
+            <p class="price">$3650</p>
+          </div>
+          <button class="btn_add">Agregar</button>
+        </div>
 
+        <div class="recommendations_card">
+          <img src="imagenes/pizza-recomendaciones.jpeg" alt="" />
+          <div>
+            <h3>Tronco-Pizza</h3>
+            <p class="description">Para todo el dia</p>
+            <p class="price">$870</p>
+          </div>
+          <button class="btn_add">Agregar</button>
+        </div>
+
+        <div class="recommendations_card">
+          <img src="imagenes/pizza-recomendaciones.jpeg" alt="" />
+          <div>
+            <h3>Papas|Provenzal</h3>
+            <p class="description">Van como piña</p>
+            <p class="price">$360</p>
+          </div>
+          <button class="btn_add">Agregar</button>
+        </div>
+      </div>
+    </section>
+    <!--  fin seccion de recomendaciones  -->
+
+    <!-- fin productos -->
+    <section class="products">
+
+      <h2>Categorias</h2>
+			<!-- Categorias -->
+      <div class="categories">
+        <button class="category active" data-category="populares">
+						<img src="imagenes/pizza-category.png" alt="">
+						Populares
+						<p>─</p>
+        </button>
+        <button class="category" data-category="pizzas">
+						<img src="imagenes/pizza-category.png" alt="">
+					Pizzas
+						<p>─</p>
+				</button>
+        <button class="category" data-category="hamburguesas">
+						<img src="imagenes/pizza-category.png" alt="">
+          Hamburguesas
+						<p>─</p>
+        </button>
+        <button class="category" data-category="napapuki">
+						<img src="imagenes/pizza-category.png" alt="">
+					Napapuki
+						<p>─</p>
+				</button>
+        <button class="category" data-category="wraps">
+						<img src="imagenes/pizza-category.png" alt="">
+					Wraps
+						<p>─</p>
+				</button>
+        <button class="category" data-category="mexicanFood">
+						<img src="imagenes/pizza-category.png" alt="">
+          Mexican Food
+						<p>─</p>
+        </button>
+        <button class="category" data-category="batidos">
+						<img src="imagenes/pizza-category.png" alt="">
+					Batidos
+						<p>─</p>
+				</button>
+      </div>
+
+    </section>
+    <!--  fin productos -->
 
     <script src="index.js"></script>
     <script src="data.js"></script>
-</body>
+  </body>
 </html>
