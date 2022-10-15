@@ -7,6 +7,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+	background-color: #181818;
+}
+
 .section_container{
     background-color:#181818 ;
 }
@@ -105,3 +109,131 @@ h2{
 .imagen_hero{
     height: 400px;
 }
+
+/* Seccion de recomendaciones */
+
+.recommendations {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 20px;
+	background-color: #181818;
+	color: #FFFFFF;
+	padding: 10px 0 50px 0;
+}
+
+.recommendations h2 {
+	grid-column: 1 / span 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
+
+.recommendations_container {
+	grid-row: 2;
+	grid-column: 1 / span 4;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.recommendations_card {
+	width: 350px;
+	background-color: #252424;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	box-shadow: 5px 5px 50px black;
+}
+
+.recommendations_card img {
+	width: 70px;
+	border-radius: 20px;
+}
+
+.btn_add {
+	border: none;
+	border-radius: 20px;
+	height: 30px;
+	width: 80px;
+  background:linear-gradient(45deg, #ffa100,#fb103d) ;
+	color: #FFFFFF;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.price {
+	font-size: 20px;
+	font-weight: 900;
+  background:linear-gradient(45deg, #ffa100,#fb103d) ;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.description {
+	color: #5A5A5A;
+}
+
+/* fin recomendaciones */
+
+/* Productos */
+
+.products {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	background-color: #181818;
+	color: #FFFFFF;
+}
+
+.products h2 {
+	font-size: 20px;
+}
+
+/* categorias */
+
+.categories {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	padding-bottom: 60px;
+}
+
+.category {
+	width: 120px;
+	height: 120px;
+	border-radius: 10px;
+	border: none;
+	background-color: #252424;
+	color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	box-shadow: 5px 5px 50px black;
+	font-weight: 600;
+}
+
+.category img{
+	width: 50px;
+}
+
+.category p {
+	font-size: 30px;
+	font-weight: 900;
+  background:linear-gradient(45deg, #ffa100,#fb103d) ;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.active {
+	background-color: #4C4D4C;
+}
+
+/*  fin productos */
