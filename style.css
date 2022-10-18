@@ -11,14 +11,28 @@ body {
 	background-color: #181818;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
+/* HEADER Y NAVBAR */
+
 .section_container{
     background-color:#181818 ;
+	max-width: 1300px;
+	margin: 0 auto;
 }
 
 
+.logo_container{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 #logo{
-    height: 100px;
+    height: 95px;
 }
 
 .header_container{
@@ -33,7 +47,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    padding: 0;
+    padding: 0 20px;
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 1300px;
@@ -73,7 +87,7 @@ a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 500px;
+	padding-top: 30px;
     
 }
 
@@ -84,6 +98,7 @@ h1{
 h2{
     font-size: 50px;
 }
+
 
 .hero-title p{
     font-size: 20px;
@@ -100,10 +115,13 @@ h2{
 .hero-title button{
     width: 200px;
     height: 50px;
+	font-weight: 700;
+	margin-top:20px ;
     border-radius: 15px;
     background:linear-gradient(45deg, #ffa100,#fb103d) ;
     color: #fafafa;
     font-size: 15px;
+	cursor: pointer;
 }
 
 .imagen_hero{
@@ -112,21 +130,27 @@ h2{
 
 /* Seccion de recomendaciones */
 
+
+
 .recommendations {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	gap: 20px;
-	background-color: #181818;
-	color: #FFFFFF;
-	padding: 10px 0 50px 0;
+	display: flex;
+	flex-direction: column;
 }
 
-.recommendations h2 {
-	grid-column: 1 / span 2;
+
+.recommendations_tittle{
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	width: 1100px;
+	height: 100px;
 	align-items: center;
+	max-width: 1300px;
+	margin: 0 auto;
+
+}
+
+.recommendations_tittle h2{
+	color: #FFFFFF;
 	font-size: 20px;
 }
 
@@ -137,6 +161,8 @@ h2{
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 20px;
+	color: #FFFFFF;
+	padding: 10px 0 50px 0;
 }
 
 .recommendations_card {
@@ -199,6 +225,7 @@ h2{
 
 .categories {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 30px;
 	padding-bottom: 60px;
@@ -237,3 +264,162 @@ h2{
 }
 
 /*  fin productos */
+
+
+/*  MEDIAQUERIES  */
+
+
+@media (max-width:1150px){
+
+	.navbar_list{
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top:100px;
+		justify-content: center;
+		align-items: center;
+		height: calc(100vh - 100px);
+		width: 100%;
+		right: 0;
+		z-index: 99999;
+		display: none;
+		background-color: #181818;
+	}
+	
+	.header{
+		padding: 0px 50px 0px 10px;
+	}
+	
+	#toggle-menu_icon {
+		display: flex;
+	}
+	
+	#toggle-menu:checked + .navbar_list{
+		display: flex;
+		cursor: pointer;
+		
+	}
+
+	
+
+	
+	.logo_hero_container{
+		display: none;
+	}
+
+	
+
+	.hero-title{
+	justify-content: center;
+	gap: 10px;
+	}
+
+
+	.hero-title h1, h2, p{
+		text-align: center;
+	}
+
+	#btn-ver_mas{
+		align-self: center;
+		width: 300px;
+	}
+
+	.recommendations_card {
+		width: 75%;
+		height: 100px;
+		justify-content: center;
+		padding:10 30px ;
+	
+		
+	}
+
+	
+	.btn_add{
+		width: 100px;
+	}
+
+	.recommendations_tittle{
+		justify-content: center;
+		width: 100%;
+	
+	}
+
+	.recommendations_card div{
+		display: flex;
+		justify-content: space-evenly;
+		width: 70%;
+	}
+
+
+
+	
+}
+
+@media (max-width:800px){
+	
+
+	.recommendations_card{
+		width: 100%;
+		border-radius: 0px;
+		height: 100px;
+	}
+
+	
+}
+
+@media (max-width:620px){
+
+	#logo{
+		height: 80px;
+	}
+	.hero_container{
+		height: 90vh;
+		
+	}
+
+	.recommendations_container .description{
+		display: none;
+	}
+
+	
+}
+
+@media (max-width:420px){
+
+	h1{
+		font-size: 50px;
+	}
+
+	h2{
+		font-size: 40px;
+	}
+
+	p{
+		width: 100%;
+		text-align: center;
+	}
+
+	#btn-ver_mas{
+		width: 90%;
+	}
+
+	.recommendations_card{
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 200px;
+		gap: 15px;
+	}
+
+	.recommendations_card div{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.recommendations img{
+		width: 100px;
+		border-radius: 50%;
+	}
+
+	
+}
