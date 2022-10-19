@@ -29,10 +29,11 @@ html{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 10px;
 }
 
 #logo{
-    height: 95px;
+    height: 60px;
 }
 
 .header_container{
@@ -124,8 +125,21 @@ h2{
 	cursor: pointer;
 }
 
+.logo_hero_container{
+
+}
+
 .imagen_hero{
-    height: 400px;
+    position:absolute;
+	top: 200px;
+	width: 265px;
+	height: 265px;
+}
+
+.imagen_hero_2{
+	position: relative;
+	left: 130px;
+	bottom: 15px;
 }
 
 /* Seccion de recomendaciones */
