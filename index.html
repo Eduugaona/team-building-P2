@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/5407179058.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5407179058.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
 
   <body>
+    <div class="overlay show-overlay"></div>
     <div class="section_container header_container">
       <header class="header">
         <div class="logo_container">
           <img src="imagenes/nucbazappiicon 1.png" alt="" id="logo" />
         </div>
-        <nav class="navbar">
-          <label for="toggle-menu"><i class="fa-solid fa-bars fa-2x" id="toggle-menu_icon"></i></label>
+        <nav class="navbar toggle_menu">
+          <label for="toggle-menu"
+            ><i class="fa-solid fa-bars fa-2x" id="toggle-menu_icon"></i
+          ></label>
           <input type="checkbox" id="toggle-menu" />
           <ul class="navbar_list">
             <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
             <li>
-              <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a>
+                <i class="fa-solid fa-cart-shopping carrito">
+                  <div class="contador active-contador"></div>
+                </i>
+              </a>
             </li>
             <li>
               <a href="#"><i class="fa-solid fa-user"></i></a>
@@ -32,7 +45,42 @@
         </nav>
       </header>
     </div>
-
+    <!-- cart menu -->
+    <div class="cart-menu toggle-cart">
+      <button class="close-cart">x</button>
+      <h3>Tus Productos</h3>
+      <div class="products-cart">
+        <!-- card -->
+        <!-- <div class="cart-item"> -->
+        <!--   <img src="imagenes/pizza 1.png" alt="" /> -->
+        <!--   <div class="item-info"> -->
+        <!--     <h3 class="item-tittle">Bennazianna</h3> -->
+        <!--     <p class="item-description">La mas completa</p> -->
+        <!--     <span class="item-price">$3650</span> -->
+        <!--   </div> -->
+        <!--   <div class="item-handler"> -->
+        <!--     <span class="quantity-handler down">-</span> -->
+        <!--     <span class="item-quantity">2</span> -->
+        <!--     <span class="quantity-handler up">+</span> -->
+        <!--   </div> -->
+        <!-- </div> -->
+        <!-- card -->
+      </div>
+      <div class="bot-container">
+        <div class="subtotal">
+          <p>Subtotal:</p>
+          <p>Envio:</p>
+        </div>
+        <div class="total-container">
+          <h3>Total:</h3>
+          <h3 class="total"></h3>
+        </div>
+        <div class="btn-container">
+          <button class="btn-buy disable">Comprar</button>
+          <button class="btn-seeMore">Ver mas productos</button>
+        </div>
+      </div>
+    </div>
     <div class="section_container">
       <div class="hero_container">
         <div class="hero-title">
@@ -139,10 +187,7 @@
       <div class="titulo-pop">
         <h2 id="texto_categorias"></h2>
       </div>
-      <div class="pop-1">
-        
-        
-      </div>
+      <div class="pop-1"></div>
     </section>
     <!-- fin seccion de los populares  -->
     <!-- footer -->
@@ -155,7 +200,13 @@
       </div>
       <div class="credito">
         <p>
-          Hecho con <i class="em em-hearts" aria-role="presentation" aria-label="BLACK HEART SUIT"></i> en
+          Hecho con
+          <i
+            class="em em-hearts"
+            aria-role="presentation"
+            aria-label="BLACK HEART SUIT"
+          ></i>
+          en
           <span>NUCBAZAPPI</span>
         </p>
       </div>
