@@ -18,6 +18,8 @@ const btnSeeMore = document.querySelector(".btn-seeMore");
 const confirmation = document.querySelector(".confirmation")
 const subTotal = document.querySelector(".subTotalPrice")
 const envioContainer = document.querySelector(".envio")
+const toggleMenu = document.querySelector("#toggle-menu_icon")
+const navbarUl = document.querySelector("#navbar_ul");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -188,14 +190,11 @@ const renderCart = () => {
     cartContainer.innerHTML = `<p class="empty-p">El carrito esta vacio</p>`;
     return;
   }
-  cartContainer.innerHTML = cart.map(renderCartProduct).join("");
+  cartContainer.innerHTML = cart.map(renderCartProduct).join(" ");
 };
 
 const toggleCart = () => {
   cartMenu.classList.toggle("toggle-cart");
-  if ((hamburguer.checked = true)) {
-    hamburguer.checked = false;
-  }
   overlay.classList.toggle("show-overlay");
 };
 
@@ -333,6 +332,11 @@ const completeBuy = () => {
 	}
 }
 
+const toggleMenuResponsive = () => {
+  navbarUl.classList.toggle("navbar_list")
+  navbarUl.classList.toggle("navbar_list-responsive")
+}
+
 
 const init = () => {
   categories.addEventListener("click", applyFilter);
@@ -340,6 +344,7 @@ const init = () => {
   window.addEventListener("DOMContentLoaded", renderPopularProducts);
   window.addEventListener("DOMContentLoaded", renderRecommendationsProducts);
   carrito.addEventListener("click", toggleCart);
+  toggleMenu.addEventListener("click", toggleMenuResponsive);
   closeCart.addEventListener("click", toggleCart);
   overlay.addEventListener("click", closeOnClick);
   window.addEventListener("scroll", closeOnScroll);
